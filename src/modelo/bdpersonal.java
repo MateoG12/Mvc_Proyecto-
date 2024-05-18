@@ -6,7 +6,7 @@ public class bdpersonal {
     public ArrayList<personal> baseDatos = new ArrayList<>();
 
     public bdpersonal(){
-        baseDatos.add(new personal("jose","gonzales gomez",16,"cc",107456742,"administrador"));
+        baseDatos.add(new personal("jose","gonzales",16,"cc",107456742,"administrador"));
     }
 
 
@@ -29,18 +29,17 @@ public class bdpersonal {
         }
         return lista;
     }
-    public String modificar(String nombre, personal nuevoDatos){
-        for(personal p : baseDatos){
-            if(p.getNombre().equals(nombre)){
-                p.setApellidos(nuevoDatos.getApellidos());
-                p.setEdad(nuevoDatos.getEdad());
-                p.setDocumento(nuevoDatos.getDocumento());
-                p.setRol(nuevoDatos.getRol());
+    public String modificar(String nombre, personal nuevoPersonal) {
+        for (int i = 0; i < baseDatos.size(); i++) {
+            personal p = baseDatos.get(i);
+            if (p.getNombre().equals(nombre)) {
+                baseDatos.set(i, nuevoPersonal);
                 return "Modificado";
             }
         }
-        return "No encontrado";
+        return "No modificado";
     }
+
 
     public String eliminar(String nombre) {
         ArrayList<personal> copiaBaseDatos = new ArrayList<>(baseDatos);
