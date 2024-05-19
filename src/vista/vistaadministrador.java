@@ -60,6 +60,7 @@ public class vistaadministrador {
 
 
     public int menu(){
+        System.out.println("MODULO 1 ");
         System.out.println("1. agregar");
         System.out.println("2. mostrar base datos");
         System.out.println("3. consultar por nombre");

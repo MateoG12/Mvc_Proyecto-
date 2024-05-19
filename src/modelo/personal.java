@@ -73,7 +73,7 @@ public class personal {
 
     @Override
     public String toString() {
-        return "\n-------------------" +
+        return "\n------------------------" +
                 "\n Nombre=" + Nombre +
                 "\n Apellidos=" + Apellidos +
                 "\n Edad=" + Edad +

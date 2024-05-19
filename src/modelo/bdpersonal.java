@@ -6,7 +6,7 @@ public class bdpersonal {
     public ArrayList<personal> baseDatos = new ArrayList<>();
 
     public bdpersonal(){
-        baseDatos.add(new personal("jose","gonzales",16,"cc",107456742,"administrador"));
+        baseDatos.add(new personal("sara","gonzales",16,"cc",107456742,"administrador"));
     }
 
 
@@ -67,4 +67,4 @@ public class bdpersonal {
                 "baseDatos=" + baseDatos +
                 '}';
     }
-}
+} 
