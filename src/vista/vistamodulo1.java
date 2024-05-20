@@ -1,10 +1,10 @@
 package vista;
 
-import controlador.controladoradministrador;
+import controlador.controladormodulo1;
 
 import java.util.Scanner;
 
-public class vistaadministrador {
+public class vistamodulo1 {
     public  String dato;
     public int dato2;
     public int opc;
@@ -82,7 +82,7 @@ public class vistaadministrador {
     }
 
     public void conectar(){
-        controladoradministrador control = new controladoradministrador();
+        controladormodulo1 control = new controladormodulo1();
         control.control();
     }
 

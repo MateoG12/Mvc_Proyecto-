@@ -1,14 +1,14 @@
 package controlador;
 
-import modelo.bdpersonal;
-import modelo.personal;
-import vista.vistaadministrador;
+import modelo.bdmodulo1;
+import modelo.modulo1;
+import vista.vistamodulo1;
 
-public class controladoradministrador {
-    bdpersonal bd = new bdpersonal();
+public class controladormodulo1 {
+    bdmodulo1 bd = new bdmodulo1();
 
     // Instancia de la clase vistaadministrador
-    vistaadministrador v = new vistaadministrador();
+    vistamodulo1 v = new vistamodulo1();
 
     public void control(){
         int op = 0;
@@ -27,7 +27,7 @@ public class controladoradministrador {
                     documento = v.capturarnumerodocumento();
                     rol = v.capturarrol();
                     // Creacion de un nuevo objeto 'personal' con los datos capturados
-                    personal p = new personal(nombre, apellidos, edad, tipo, documento, rol);
+                    modulo1 p = new modulo1(nombre, apellidos, edad, tipo, documento, rol);
                     bd.agregarpersonal(p);
                     v.imprimir(bd.getBaseDatos().toString());
                     break;
@@ -54,7 +54,7 @@ public class controladoradministrador {
                     String nuevoTipo = v.capturartipodocumento();
                     int nuevoDocumento = v.capturarnumerodocumento();
                     String nuevoRol = v.capturarrol();
-                    personal nuevoPersonal = new personal(nuevoNombre, nuevosApellidos, nuevaEdad, nuevoTipo, nuevoDocumento, nuevoRol);
+                    modulo1 nuevoPersonal = new modulo1(nuevoNombre, nuevosApellidos, nuevaEdad, nuevoTipo, nuevoDocumento, nuevoRol);
                     v.imprimir(bd.modificar(nombreModificar, nuevoPersonal)); //Llama al método modificar
                     break;
 

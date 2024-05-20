@@ -1,6 +1,6 @@
 package modelo;
 
-public class personal {
+public class modulo1 {
     private String Nombre;
     private String Apellidos;
     private int Edad;
@@ -8,11 +8,11 @@ public class personal {
     private  int Documento;
     private String Rol;
 
-    public personal(){
+    public modulo1(){
 
     }
 
-    public personal(String nombre, String apellidos, int edad, String tipo, int documento, String rol) {
+    public modulo1(String nombre, String apellidos, int edad, String tipo, int documento, String rol) {
         Nombre = nombre;
         Apellidos = apellidos;
         Edad = edad;
