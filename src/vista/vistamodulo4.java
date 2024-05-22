@@ -35,18 +35,21 @@ public class vistamodulo4 {
         System.out.println("1. agregar evento");
         System.out.println("2. mostrar eventos ");
         System.out.println("3. consultar por categoria");
-        System.out.println("4. eliminar ");
-        System.out.println("5. modificar");
-        System.out.println("6. salir");
+        System.out.println("4. consulta por fecha");
+        System.out.println("5. consulta por nombre");
+        System.out.println("6. eliminar ");
+        System.out.println("7. modificar");
+        System.out.println("8. salir");
         this.opc = x.nextInt();
-        while (this.opc <= 0 || this.opc>6){
-            System.out.println("ingrese una opcion valida");
-            System.out.println("1. agregar");
-            System.out.println("2. mostrar base datos");
-            System.out.println("3. consultar por nombre");
-            System.out.println("4. eliminar");
-            System.out.println("5. modificar");
-            System.out.println("6. salir");
+        while (this.opc <= 0 || this.opc>8){
+            System.out.println("1. agregar evento");
+            System.out.println("2. mostrar eventos ");
+            System.out.println("3. consultar por categoria");
+            System.out.println("4. consulta por fecha");
+            System.out.println("5. consulta por nombre");
+            System.out.println("6. eliminar ");
+            System.out.println("7. modificar");
+            System.out.println("8. salir");
             this.opc = x.nextInt();
         }
         return this.opc;

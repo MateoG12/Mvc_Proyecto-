@@ -28,6 +28,22 @@ public class bdmodulo4 {
         }
         return lista;
     }
+    public String consultanombre(String nombre){
+        String lista = "";
+        for(modulo4 m4 : baseDatos4){
+            if (m4.getNombre().equals(nombre))
+                lista += m4.toString();
+        }
+        return lista;
+    }
+    public String consultafecha(String fecha){
+        String lista = "";
+        for(modulo4 m4 : baseDatos4){
+            if (m4.getFecha().equals(fecha))
+                lista += m4.toString();
+        }
+        return lista;
+    }
 
     public String modificar(String fecha, modulo4 nuevafecha){
         for(int i = 0; i<baseDatos4.size();i++){

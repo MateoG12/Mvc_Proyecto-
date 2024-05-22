@@ -29,6 +29,14 @@ public class bdmodulo1 {
         }
         return lista;
     }
+    public String consultadocumento(int documento){
+        String lista = "";
+        for(modulo1 p : baseDatos){
+            if(p.getDocumento()==documento)
+                lista+=p.toString();
+        }
+        return lista;
+    }
     public String modificar(String nombre, modulo1 nuevoPersonal) {
         for (int i = 0; i < baseDatos.size(); i++) {
             modulo1 p = baseDatos.get(i);

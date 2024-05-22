@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class bdmodulo2 {
     public ArrayList<modulo2>base_datos_fechas=new ArrayList<>();
 
-    public bdmodulo2(){base_datos_fechas.add(new modulo2("convocatoria1","19/05/2024","Partido1","19/05/2024","Entrenamiento1","18/05/2024"));}
+    public bdmodulo2(){base_datos_fechas.add(new modulo2("convocatoria1","19/05/2024","partido1","19/05/2024","entrenamiento1","18/05/2024"));}
     public void agregarfechas(modulo2 Modulo2){base_datos_fechas.add(Modulo2);}
 
     public String mostrarlista(){
@@ -14,10 +14,26 @@ public class bdmodulo2 {
             datos+=m.toString();
         }return  datos;
     }
-    public String consulta(String convocatorias){
+    public String consultaconvocatoria(String convocatorias){
         String lista="";
         for (modulo2 m : base_datos_fechas){
             if(m.getConvocatorias().equals(convocatorias))
+                lista+=m.toString();
+        }
+        return lista;
+    }
+    public String consultapartidos(String partidos){
+        String lista="";
+        for (modulo2 m : base_datos_fechas){
+            if(m.getPartidos().equals(partidos))
+                lista+=m.toString();
+        }
+        return lista;
+    }
+    public String consultaentrenamiento(String entrenamiento){
+        String lista="";
+        for (modulo2 m : base_datos_fechas){
+            if(m.getEntrenamiento().equals(entrenamiento))
                 lista+=m.toString();
         }
         return lista;

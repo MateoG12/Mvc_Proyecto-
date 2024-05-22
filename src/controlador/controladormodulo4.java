@@ -10,9 +10,9 @@ public class controladormodulo4 {
     vistamodulo4 v4 = new vistamodulo4();
     public void control(){
         int op = 0;
-        boolean control = true;
+        boolean control4 = true;
 
-        while (control){
+        while (control4){
             op = v4.menu();
             switch (op){
                 case 1:
@@ -34,10 +34,18 @@ public class controladormodulo4 {
                     v4.imprimir(bd4.consulta(buscarevento));
                     break;
                 case 4:
+                    String buscarfecha = v4.capturarfecha();
+                    v4.imprimir(bd4.consultafecha(buscarfecha));
+                    break;
+                case 5:
+                    String buscarnombre = v4.capturarnombre();
+                    v4.imprimir(bd4.consultanombre(buscarnombre));
+                    break;
+                case 6:
                     String eliminarevento = v4.capturarfecha();
                     v4.imprimir(bd4.eliminar(eliminarevento));
                     break;
-                case 5:
+                case 7:
                     String fechamodificar = v4.capturarfecha();
                     String modificarinfor = v4.capturarinfor();
                     String modificarnombre = v4.capturarnombre();
@@ -46,8 +54,8 @@ public class controladormodulo4 {
                     modulo4 nuevafecha = new modulo4(modificarinfor,modificarnombre,modificarfecha,modificarcategoria);
                     v4.imprimir(bd4.modificar(fechamodificar,nuevafecha));
                     break;
-                case 6:
-                    control = false;
+                case 8:
+                    control4 = false;
                     break;
                 default:
                     v4.imprimir("no existe esa opcion digite de nuevo");

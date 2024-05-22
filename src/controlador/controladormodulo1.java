@@ -40,13 +40,16 @@ public class controladormodulo1 {
                     String buscarNombre = v.capturarnombre();//capturar el nombre del registro a consultar
                     v.imprimir(bd.consulta(buscarNombre));//llamar al metodo que se consulta
                     break;
-
                 case 4:
+                    int buscardocumento = v.capturarnumerodocumento();//capturar el nombre del registro a consultar
+                    v.imprimir(bd.consultadocumento(buscardocumento));//llamar al metodo que se consulta
+                    break;
+                case 5:
                     String eliminarnombre = v.capturarnombre(); //capturar el nombre del registro a eliminar
                     v.imprimir(bd.eliminar(eliminarnombre));//llamar al metodo eliminado
                     break;
 
-                case 5: // modificar un registro
+                case 6: // modificar un registro
                     String nombreModificar = v.capturarnombre(); //captura el nombre del registro a modificar
                     String nuevoNombre = v.capturarnombre(); //captura los nuevos datos
                     String nuevosApellidos = v.capturarapellidos();
@@ -58,7 +61,7 @@ public class controladormodulo1 {
                     v.imprimir(bd.modificar(nombreModificar, nuevoPersonal)); //Llama al método modificar
                     break;
 
-                case 6:
+                case 7:
                     control = false;
                     break;
 

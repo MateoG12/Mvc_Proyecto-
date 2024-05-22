@@ -64,18 +64,20 @@ public class vistamodulo1 {
         System.out.println("1. agregar");
         System.out.println("2. mostrar base datos");
         System.out.println("3. consultar por nombre");
-        System.out.println("4. eliminar");
-        System.out.println("5. modificar");
-        System.out.println("6. salir");
+        System.out.println("4. consultar por documento");
+        System.out.println("5. eliminar");
+        System.out.println("6. modificar");
+        System.out.println("7. salir");
         opc = x.nextInt();
-        while (this.opc <= 0 || this.opc>6){
+        while (this.opc <= 0 || this.opc>7){
             System.out.println("ingrese una opcion valida");
             System.out.println("1. agregar");
             System.out.println("2. mostrar base datos");
             System.out.println("3. consultar por nombre");
-            System.out.println("4. eliminar");
-            System.out.println("5. modificar");
-            System.out.println("6. salir");
+            System.out.println("4. consultar por nombre");
+            System.out.println("5. eliminar");
+            System.out.println("6. modificar");
+            System.out.println("7. salir");
             this.opc = x.nextInt();
         }
         return this.opc;
