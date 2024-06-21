@@ -9,11 +9,11 @@ public class controladormodulo2 {
     vistamodulo2 v2 = new vistamodulo2();
 
     public void control() {
-        int op;
+        int opc = 0;
         boolean control = true;
         while (control) {
-            op = v2.menu();
-            switch (op) {
+            opc = v2.menu();
+            switch (opc) {
                 case 1:
                     String convocatoria = v2.capturarconvocatoria();
                     String fechaconvocatoria = v2.capturarfechaconvocatoria();
@@ -22,8 +22,9 @@ public class controladormodulo2 {
                     String entrenamiento = v2.capturarentrenamiento();
                     String fechaentrenamiento = v2.capturarfechaentrenamiento();
                     modulo2 m = new modulo2(convocatoria, fechaconvocatoria, partido, fechapartido, entrenamiento, fechaentrenamiento);
-                    bd2.agregarfechas(m);
-                    v2.imprimir2(bd2.mostrarlista());
+                    v2.imprimir2(bd2.getBase_datos_fechas().toString());
+                    bd2.agregarfechas(convocatoria,m);
+                    v2.imprimir2(bd2.getBase_datos_fechas().toString());
                     break;
                 case 2:
                     v2.imprimir2(bd2.mostrarlista());

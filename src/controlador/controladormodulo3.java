@@ -16,14 +16,12 @@ public class controladormodulo3 {
                 case 1:
                     String nombre,categoria;
                     int  documento,diafaltante;
-                    //Capturar los datos de personal
                     nombre = v.capturarnombre();
                     categoria = v.capturarcategoria();
                     documento = v.capturarnumerodocumento();
                     diafaltante = v.capturarpagosfaltantes();
-                    // Creacion de un nuevo objeto 'personal' con los datos capturados
-                    modulo3 t = new modulo3(nombre, categoria,documento,diafaltante);
-                    bd3.agregardatos(t);
+                    modulo3 t = new modulo3(nombre, documento,categoria,diafaltante);
+                    bd3.agregardatos(documento,t);
                     v.imprimir(bd3.getBaseDatos3().toString());
                     break;
                 case 2:
@@ -44,7 +42,7 @@ public class controladormodulo3 {
                     String nuevoscategoria = v.capturarcategoria();
                     int nuevadocumento = v.capturarnumerodocumento();
                     int nuevofaltante = v.capturarpagosfaltantes();
-                    modulo3 nuevoPersonal = new modulo3(nuevoNombre, nuevoscategoria,nuevadocumento,nuevofaltante);
+                    modulo3 nuevoPersonal = new modulo3(nuevoNombre,nuevadocumento,nuevoscategoria,nuevofaltante);
                     v.imprimir(bd3.modificar(numeroModificar, nuevoPersonal)); //Llama al método modificar
                     break;
 

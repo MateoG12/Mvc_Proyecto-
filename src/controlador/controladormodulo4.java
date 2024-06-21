@@ -21,9 +21,8 @@ public class controladormodulo4 {
                     nombre = v4.capturarnombre();
                     fecha = v4.capturarfecha();
                     categoria = v4.capturarcategoria();
-
-                    modulo4  m4 = new modulo4(infor, nombre, fecha, categoria);
-                    bd4.Agregarfecha(m4);
+                    modulo4 m4 = new modulo4(infor, nombre, fecha, categoria);
+                    bd4.Agregarfecha(nombre,m4);
                     v4.imprimir(bd4.getBaseDatos4().toString());
                     break;
                 case 2:
@@ -42,7 +41,7 @@ public class controladormodulo4 {
                     v4.imprimir(bd4.consultanombre(buscarnombre));
                     break;
                 case 6:
-                    String eliminarevento = v4.capturarfecha();
+                    String eliminarevento = v4.capturarnombre();
                     v4.imprimir(bd4.eliminar(eliminarevento));
                     break;
                 case 7:
@@ -52,7 +51,7 @@ public class controladormodulo4 {
                     String modificarfecha = v4.capturarfecha();
                     String modificarcategoria = v4.capturarcategoria();
                     modulo4 nuevafecha = new modulo4(modificarinfor,modificarnombre,modificarfecha,modificarcategoria);
-                    v4.imprimir(bd4.modificar(fechamodificar,nuevafecha));
+                    v4.imprimir(bd4.modificar(modificarnombre,nuevafecha));
                     break;
                 case 8:
                     control4 = false;

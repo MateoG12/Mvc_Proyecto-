@@ -6,9 +6,9 @@ public class modulo3 {
     private int pagosfaltantes;
 
 
-    public modulo3(String nombre, String categoria, int documento, int diafaltante){
-
-    }
+//    public modulo3(String nombre, String categoria, int documento, int diafaltante){
+//
+//    }
     public modulo3(String nombre, int documento, String categoria, int pagosfaltantes) {
         Nombre = nombre;
         this.documento = documento;

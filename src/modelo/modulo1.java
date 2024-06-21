@@ -1,27 +1,29 @@
 package modelo;
 
 public class modulo1 {
-    private String Nombre;
-    private String Apellidos;
-    private int Edad;
-    private String Tipo;
-    private  int Documento;
-    private String Rol;
+    public String Nombre;
+    public String Apellidos;
+    public int Edad;
+    public String Tipo;
+    public  int Documento;
+    public String Rol;
+    private String Usuario;
+    private String Password;
 
     public modulo1(){
 
     }
 
-    public modulo1(String nombre, String apellidos, int edad, String tipo, int documento, String rol) {
+    public modulo1(String nombre,String apellidos,int edad, String tipo, int documento, String rol,String usuario,String password) {
         Nombre = nombre;
-        Apellidos = apellidos;
-        Edad = edad;
-        Tipo = tipo;
         Documento = documento;
         Rol = rol;
+        Usuario = usuario;
+        Tipo = tipo;
+        Edad = edad;
+        Apellidos = apellidos;
+        Password = password;
     }
-
-
 
     public String getNombre() {
         return Nombre;
@@ -71,6 +73,22 @@ public class modulo1 {
         Rol = rol;
     }
 
+    public String getUsuario() {
+        return Usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        Usuario = usuario;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
     @Override
     public String toString() {
         return "\n------------------------" +
@@ -80,6 +98,8 @@ public class modulo1 {
                 "\n Tipo=" + Tipo +
                 "\n Documento=" + Documento +
                 "\n Rol=" + Rol +
+                "\n Usuario=" + Usuario +
+                "\n Contraseña=" + Password +
                 '\n';
     }
 }

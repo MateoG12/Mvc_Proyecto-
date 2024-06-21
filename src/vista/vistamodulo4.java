@@ -2,6 +2,7 @@ package vista;
 
 import controlador.controladormodulo4;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class vistamodulo4 {
@@ -10,47 +11,27 @@ public class vistamodulo4 {
 
     Scanner x = new Scanner(System.in);
     public String capturarinfor(){
-        System.out.println("Por favor ingrese la informacion del evento ");
-        this.dato = x.next();
+        dato= JOptionPane.showInputDialog("Por favor ingrese la informacion del evento ");
         return this.dato;
     }
     public String capturarnombre(){
-        System.out.println("ingrese el nombre del evento");
-        this.dato = x.next();
+        dato=JOptionPane.showInputDialog("ingrese el nombre del evento");
         return this.dato;
     }
     public String capturarfecha(){
-        System.out.println("ingrese la fecha del evento");
-        this.dato = x.next();
+        dato=JOptionPane.showInputDialog("ingrese la fecha del evento");
         return this.dato;
     }
     public String capturarcategoria(){
-        System.out.println("ingrese la categoria del evento");
-        this.dato = x.next();
+        dato=JOptionPane.showInputDialog("ingrese la categoria del evento");
         return this.dato;
     }
 
     public int menu(){
-        System.out.println("Modulo 4");
-        System.out.println("1. agregar evento");
-        System.out.println("2. mostrar eventos ");
-        System.out.println("3. consultar por categoria");
-        System.out.println("4. consulta por fecha");
-        System.out.println("5. consulta por nombre");
-        System.out.println("6. eliminar ");
-        System.out.println("7. modificar");
-        System.out.println("8. salir");
-        this.opc = x.nextInt();
+        JOptionPane.showMessageDialog(null,"Modulo 4");
+        opc= Integer.parseInt(JOptionPane.showInputDialog("1. agregar evento\n2. mostrar eventos\n3. consultar por categoria\n4. consulta por fecha\n5. consulta por nombre\n6. eliminar\n7. modificar\n8. salir"));
         while (this.opc <= 0 || this.opc>8){
-            System.out.println("1. agregar evento");
-            System.out.println("2. mostrar eventos ");
-            System.out.println("3. consultar por categoria");
-            System.out.println("4. consulta por fecha");
-            System.out.println("5. consulta por nombre");
-            System.out.println("6. eliminar ");
-            System.out.println("7. modificar");
-            System.out.println("8. salir");
-            this.opc = x.nextInt();
+            opc= Integer.parseInt(JOptionPane.showInputDialog("1. agregar evento\n2. mostrar eventos\n3. consultar por categoria\n4. consulta por fecha\n5. consulta por nombre\n6. eliminar\n7. modificar\n8. salir"));
         }
         return this.opc;
     }
@@ -60,6 +41,6 @@ public class vistamodulo4 {
     }
 
     public void imprimir(String datos4){
-        System.out.println(datos4);
+        JOptionPane.showMessageDialog(null,datos4);
     }
 }

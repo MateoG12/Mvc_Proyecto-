@@ -2,6 +2,7 @@ package vista;
 
 import controlador.controladormodulo3;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class vistamodulo3 {
@@ -10,54 +11,32 @@ public class vistamodulo3 {
     public int opc;
     Scanner x =new Scanner(System.in);
     public String capturarnombre(){
-        System.out.println("por favor ingrese su nombre");
-        this.dato = x.next();
+        dato= JOptionPane.showInputDialog("por favor ingrese su nombre");
         return this.dato;
     }
     public int capturarnumerodocumento() {
-        System.out.println("por favor ingrese el numero de su documento");
-        this.dato2 = x.nextInt();
+        dato2=Integer.parseInt(JOptionPane.showInputDialog("por favor ingrese el numero de su documento"));
         while (this.dato2 <= 0) {
-            System.out.println("documento invalido");
-            System.out.println("ingrese su documento");
-            this.dato2 = x.nextInt();
+            dato2=Integer.parseInt(JOptionPane.showInputDialog("documento invalido\ningrese su documento"));
         }
         return this.dato2;
     }
     public String capturarcategoria(){
-        System.out.println("por favor ingrese su categoria \n ej: sub 15 , sub 17 , sub 20");
-        this.dato = x.next().toLowerCase();
-        this.dato2 = x.nextInt();
+        dato= JOptionPane.showInputDialog("por favor ingrese su categoria \n ej: sub 15 , sub 17 , sub 20").toLowerCase();
         return this.dato;
     }
     public int capturarpagosfaltantes() {
-        System.out.println("por favor ingrese el los dias que faltan de el pago ");
-        this.dato2 = x.nextInt();
+        dato2=Integer.parseInt(JOptionPane.showInputDialog("por favor ingrese el los dias que faltan de el pago "));
         while (this.dato2 < 0) {
-            System.out.println("documento invalido");
-            System.out.println("ingrese su documento");
-            this.dato2 = x.nextInt();
+            dato2=Integer.parseInt(JOptionPane.showInputDialog("documento invalido\ningrese su documento"));
         }
         return this.dato2;
     }
     public int menu(){
-        System.out.println("MODULO 3 ");
-        System.out.println("1. agregar");
-        System.out.println("2. mostrar los datos");
-        System.out.println("3. consultar por nombre");
-        System.out.println("4 consultar por documento");
-        System.out.println("5. modificar");
-        System.out.println("6. salir");
-        opc = x.nextInt();
+        JOptionPane.showMessageDialog(null, "MODULO 3 ");
+        opc = Integer.parseInt(JOptionPane.showInputDialog("1. agregar\n2. mostrar los datos\n3. consultar por nombre\n4 consultar por documento\n5. modificar\n6. salir"));
         while (this.opc <= 0 || this.opc>6){
-            System.out.println("ingrese una opcion valida");
-            System.out.println("1. agregar");
-            System.out.println("2. mostrar los datos");
-            System.out.println("3. consultar por nombre");
-            System.out.println("4 consultar por documento");
-            System.out.println("5. modificar");
-            System.out.println("6. salir");
-            this.opc = x.nextInt();
+            opc = Integer.parseInt(JOptionPane.showInputDialog("1. agregar\n2. mostrar los datos\n3. consultar por nombre\n4 consultar por documento\n5. modificar\n6. salir"));
         }
         return this.opc;
     }
@@ -67,7 +46,7 @@ public class vistamodulo3 {
     }
 
     public void imprimir(String datos){
-        System.out.println(datos);
+        JOptionPane.showMessageDialog(null, datos);
     }
 
 }

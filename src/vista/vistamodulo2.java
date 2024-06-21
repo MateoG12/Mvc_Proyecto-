@@ -2,6 +2,7 @@ package vista;
 
 import controlador.controladormodulo2;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class vistamodulo2 {
@@ -10,58 +11,35 @@ public class vistamodulo2 {
 
     Scanner x = new Scanner(System.in);
     public String capturarconvocatoria(){
-        System.out.println("Porfavor ingrese la convocatoria ");
-        this.dato=x.next();
+        dato= JOptionPane.showInputDialog("Porfavor ingrese la convocatoria ");
         return this.dato;
     }
     public String capturarfechaconvocatoria(){
-        System.out.println("Porfavor ingrese  la fecha de  convocatoria ");
-        this.dato=x.next();
+        dato= JOptionPane.showInputDialog("Porfavor ingrese  la fecha de  convocatoria ");
         return this.dato;
     }
     public String capturarpartidos(){
-        System.out.println("Porfavor ingrese el partido ");
-        this.dato=x.next();
+        dato= JOptionPane.showInputDialog("Porfavor ingrese el partido ");
         return this.dato;
     }
     public String capturarfechapartidos(){
-        System.out.println("Porfavor ingrese la fecha de partido ");
-        this.dato=x.next();
+        dato= JOptionPane.showInputDialog("Porfavor ingrese la fecha de partido ");
         return this.dato;
     }
     public String capturarentrenamiento(){
-        System.out.println("Porfavor ingrese la  ");
-        this.dato=x.next();
+        dato= JOptionPane.showInputDialog("Porfavor ingrese el entrenamiento  ");
         return this.dato;
     }
 
     public String capturarfechaentrenamiento(){
-        System.out.println("Porfavor ingrese la convocatoria ");
-        this.dato=x.next();
+        dato= JOptionPane.showInputDialog("Porfavor ingrese la fecha de entrenamiento ");
         return this.dato;
     }
     public int menu(){
-        System.out.println("MODULO 2 ");
-        System.out.println("1. agregar");
-        System.out.println("2. mostrar base datos");
-        System.out.println("3. consultar por convocatoria ");
-        System.out.println("4. consultar por partido ");
-        System.out.println("5. consultar por entrenamiento ");
-        System.out.println("6. eliminar");
-        System.out.println("7. modificar");
-        System.out.println("8. salir");
-        opc = x.nextInt();
+        JOptionPane.showMessageDialog(null, "MODULO 2 ");
+        opc = Integer.parseInt(JOptionPane.showInputDialog("1. agregar\n2. mostrar base datos\n3. consultar por convocatoria\n4. consultar por partido\n5. consultar por entrenamiento\n6. eliminar\n7. modificar\n8. salir" ));
         while (this.opc <= 0 || this.opc>8){
-            System.out.println("ingrese una opcion valida");
-            System.out.println("1. agregar");
-            System.out.println("2. mostrar base datos");
-            System.out.println("3. consultar por convocatoria ");
-            System.out.println("4. consultar por partido ");
-            System.out.println("5. consultar por entrenamiento ");
-            System.out.println("6. eliminar");
-            System.out.println("7. modificar");
-            System.out.println("8. salir");
-            this.opc = x.nextInt();
+            opc = Integer.parseInt(JOptionPane.showInputDialog("1. agregar\n2. mostrar base datos\n3. consultar por convocatoria\n4. consultar por partido\n5. consultar por entrenamiento\n6. eliminar\n7. modificar\n8. salir" ));
         }
         return this.opc;
     }
@@ -71,6 +49,6 @@ public class vistamodulo2 {
     }
 
     public void imprimir2(String datos){
-        System.out.println(datos);
+        JOptionPane.showMessageDialog(null,datos);
     }
 }

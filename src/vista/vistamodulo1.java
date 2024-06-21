@@ -2,6 +2,7 @@ package vista;
 
 import controlador.controladormodulo1;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class vistamodulo1 {
@@ -10,77 +11,68 @@ public class vistamodulo1 {
     public int opc;
     Scanner x = new Scanner(System.in);
     public String capturarnombre(){
-        System.out.println("por favor ingrese su nombre");
-        this.dato = x.next();
+        dato= JOptionPane.showInputDialog("por favor ingrese su nombre");
         return this.dato;
     }
+
     public String capturarapellidos(){
-        System.out.println("por favor ingrese sus apellidos");
-        this.dato = x.next();
+        dato=JOptionPane.showInputDialog("por favor ingrese sus apellidos");
         return this.dato;
     }
     public int capturaredad(){
-        System.out.println("por favor ingrese su edad");
-        this.dato2 = x.nextInt();
-        while (this.dato2 <= 0 || this.dato2 >= 100){
-            System.out.println("la edad es invalida ");
-            System.out.println("ingrese su edad");
-            this.dato2 = x.nextInt();
+        dato2=Integer.parseInt(JOptionPane.showInputDialog("por favor ingrese su edad"));
+        while (dato2 <= 0 || dato2 >= 100){
+            dato2=Integer.parseInt(JOptionPane.showInputDialog("la edad es invalida\ningrese su edad "));
         }
         return  this.dato2;
     }
 
     public String capturartipodocumento(){
-        System.out.println("por favor ingrese su tipo documento");
-        this.dato = x.next();
+        dato=JOptionPane.showInputDialog("por favor ingrese su tipo documento");
         return this.dato;
     }
 
     public int capturarnumerodocumento(){
-        System.out.println("por favor ingrese el numero de su documento");
-        this.dato2 = x.nextInt();
-        while (this.dato2 <= 0){
-            System.out.println("documento invalido");
-            System.out.println("ingrese su documento");
-            this.dato2 = x.nextInt();
+        dato2=Integer.parseInt(JOptionPane.showInputDialog("por favor ingrese el numero de su documento"));
+        while (dato2 <= 0){
+            dato2=Integer.parseInt(JOptionPane.showInputDialog("documento invalido\ningrese su documento"));
         }
         return  this.dato2;
     }
 
-    public String capturarrol(){
-        System.out.println("por favor ingrese su rol");
-        this.dato = x.next().toLowerCase();
-        while (!(this.dato.equals("administrador"))){
-            System.out.println("rol invalido");
-            System.out.println("ingrese su rol");
-            this.dato2 = x.nextInt();
+    public String capturarrol() {
+        dato = JOptionPane.showInputDialog("Por favor ingrese su rol").toLowerCase();
+        while (!dato.equals("administrador")) {
+            JOptionPane.showMessageDialog(null, "Rol inválido. Por favor ingrese su rol nuevamente:");
+            dato = JOptionPane.showInputDialog("Por favor ingrese su rol").toLowerCase();
         }
+        return dato;
+    }
+    public String capturarusuario(){
+        JOptionPane.showMessageDialog(null,"BIENVENIDO");
+        dato=JOptionPane.showInputDialog("Por favor ingrese un usuario");
         return this.dato;
     }
 
+    public String capturarpassword(){
+        dato=JOptionPane.showInputDialog("Por favor ingrese su contraseña");
+        return this.dato;
+    }
 
-    public int menu(){
-        System.out.println("MODULO 1 ");
-        System.out.println("1. agregar");
-        System.out.println("2. mostrar base datos");
-        System.out.println("3. consultar por nombre");
-        System.out.println("4. consultar por documento");
-        System.out.println("5. eliminar");
-        System.out.println("6. modificar");
-        System.out.println("7. salir");
-        opc = x.nextInt();
-        while (this.opc <= 0 || this.opc>7){
+    public int menu() {
+        JOptionPane.showMessageDialog(null, "MODULO 1 ");
+        opc = Integer.parseInt(JOptionPane.showInputDialog("1. agregar\n2. mostrar base datos\n3. consultar por nombre\n4. consultar por documento\n5. eliminar\n6. modificar\n7. salir "));
+        while (this.opc <= 0 || this.opc > 7) {
             System.out.println("ingrese una opcion valida");
-            System.out.println("1. agregar");
-            System.out.println("2. mostrar base datos");
-            System.out.println("3. consultar por nombre");
-            System.out.println("4. consultar por nombre");
-            System.out.println("5. eliminar");
-            System.out.println("6. modificar");
-            System.out.println("7. salir");
-            this.opc = x.nextInt();
+            opc = Integer.parseInt(JOptionPane.showInputDialog("1. agregar\n2. mostrar base datos\n3. consultar por nombre\n4. consultar por documento\n5. eliminar\n6. modificar\n7. salir "));
         }
-        return this.opc;
+    return opc;
+    }
+    public void mensaje1(){
+        JOptionPane.showMessageDialog(null, "Login exitoso. ");
+    }
+    public void mensaje2(){
+        JOptionPane.showMessageDialog(null, "Credenciales incorrectas.  ");
     }
 
     public void conectar(){
@@ -89,6 +81,6 @@ public class vistamodulo1 {
     }
 
     public void imprimir(String datos){
-        System.out.println(datos);
+        JOptionPane.showMessageDialog(null,datos);
     }
 }

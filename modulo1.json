@@ -1,0 +1,22 @@
+{
+  "1234567890": {
+    "Nombre": "sara",
+    "Apellidos": "gonzales",
+    "Edad": 16,
+    "Tipo": "cc",
+    "Documento": 1234567890,
+    "Rol": "administrador",
+    "Usuario": "usuario1",
+    "Password": "contraseña1"
+  },
+  "123456789": {
+    "Nombre": "sara",
+    "Apellidos": "gonzales",
+    "Edad": 16,
+    "Tipo": "cc",
+    "Documento": 123456789,
+    "Rol": "administrador",
+    "Usuario": "usuario",
+    "Password": "contraseña"
+  }
+}
